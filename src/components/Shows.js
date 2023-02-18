@@ -1,19 +1,11 @@
-import React, {useState, useEffect} from "react";
-import "./css/Main.css";
+import React from "react";
 
-
-function Main({movie}){
-
-
-    const imageBase = 'https://image.tmdb.org/t/p/w500/'
-
-
-
-    
-        return  (
-            <div className="movie">
+function Shows() {
+    return(
+        <div>
+ <div className="shows">
             <img src={imageBase + movie.poster_path} className="poster"></img>
-            <div className="movie-details">
+            <div className="show-titles">
                 <div className="box">
                     <h4 className="title">{movie.title}</h4>
                     <p className="rating">{movie.vote_average}</p>
@@ -25,8 +17,8 @@ function Main({movie}){
 
             </div>
         </div>
-
+        </div>
     )
 }
 
-export default Main; 
+export default Shows;
