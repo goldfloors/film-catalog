@@ -423,5 +423,5 @@ app.get('/api/movies', async (req, res, next) => {
 });
 
 
-// we export the app, not listening in here, so that we can run tests
+
 module.exports = app;
