@@ -1,0 +1,38 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+:root{
+    --primary-color: #e9e8ec;
+    --secondary-color: rgba(221, 225, 238, 0.969);
+}
+
+body{
+    background-color: var(--primary-color);
+}
+
+.Nav-main{
+    display: flex;
+    justify-content: space-around; 
+    align-items: center;
+    background-color: var(--secondary-color);
+    height: 100px;
+}
+
+ul{
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin-right: 1rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: 1rem;
+}
