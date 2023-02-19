@@ -1,7 +1,4 @@
 # film-catalog
-start server:
-node server.js
-
 
 This project is a web app that displays a cataloge of movies and TV Shows. 
 
