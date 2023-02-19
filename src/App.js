@@ -10,21 +10,11 @@ const getShowURL = 'http://localhost:4000/api/shows'
 
 
 function App() {
-  const [movieData, setData] = useState([]);
+  const [generalData, setData] = useState([]);
   const [isShows, setIsShows] = useState(false);
 
-  const ShowsClickHandeler = (event) => {
-    event.preventDefault()
-    fetch(getShowURL).then(res => res.json())
-      .then(data => {
-        //setData(data.results[0].poster_path);
-        setData(data.results)
-      })
-      setIsShows(true)
-  }
-
-
-  console.log(movieData)
+ 
+  console.log(generalData)
 
 
   useEffect(() => {
@@ -36,10 +26,14 @@ function App() {
   }, [getDataURL]);
   return (
     <div>
-      <Navbar />
+      <Navbar setData={setData} setIsShows={setIsShows} />
       <div className="main-movies">
-        {movieData.map(movie => {
-          return <Main movie={movie} />
+        {generalData.map(data => {
+         return isShows ? 
+         <Shows shows={data}/> 
+         : 
+         <Main movie={data} />
+   
         })}
       </div>
 

@@ -833,6 +833,26 @@ app.get('/api/shows', async (req, res, next) => {
 
 );
 
+/* Making search button functional-- In Progress
+
+
+app.get('/api/shows/:name', async (req, res, next) => {
+    const name = req.params.name
+    try {
+        const data = tvData.find(show => show.name == name)
+        console.log(data)
+        res.send(tvData);
+    } catch (error) {
+        console.error(error);
+        next(error)
+    }
+}
+
+);
+*/
+
+
+
 
 
 module.exports = app;
